@@ -1,6 +1,6 @@
 # varibale in same playbook
 ---
-- hosts: web
+- hosts: frontend
   become: yes
   vars:
     type: nginx
@@ -8,9 +8,8 @@
   tasks:
     - name: Ensure nginx is installed and running
       yum:
-        name: nginx
-        state: started
-        enabled: yes
+        name: "{{ type }}"
+        state: present
     - name: print software details
       debug:
-        msg: "whe have installed {{ type}} and version is {{ vesrion }}"
+        msg: "whe have installed {{ type }} and version is {{ version }}"
