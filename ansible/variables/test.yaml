@@ -1,7 +1,7 @@
 # varibale in same playbook
- ---
- - hosts: web
-   become: yes
+---
+- hosts: web
+  become: yes
    vars:
      type: nginx
      version: latest
@@ -12,6 +12,6 @@
          state: started
          enabled: yes
      - name: print software details
-        debug:
+       debug:
           msg: "whe have installed {{ type}} and version is {{ vesrion }}"
            
