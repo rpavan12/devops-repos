@@ -3,13 +3,20 @@
 - hosts: backend
   become: yes
   vars:
-    type: nginx
+    type: httpd
     version: latest
   tasks:
-    - name: Ensure nginx is installed and running
+    - name: Ensure httpd is installed and running
       yum:
         name: "{{ type }}"
         state: present
+    - name: started httpd
+      service:
+        name: "{{ type }}"
+        state: started
+        enabled: yes
     - name: print software details
       debug:
-        msg: "whe have installed {{ type }} and version is {{ version }}"
+        msg: 
+          - "we have installed {{ type }} and version is {{ version }}"
+          - " now the user is {{ ansible_user }}"
