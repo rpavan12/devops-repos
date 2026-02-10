@@ -1,6 +1,6 @@
 # varibale in same playbook
 ---
-- hosts: frontend
+- hosts: backend
   become: yes
   vars:
     type: nginx
