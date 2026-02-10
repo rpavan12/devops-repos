@@ -5,13 +5,12 @@
   vars:
     type: nginx
     version: latest
-   tasks:
-     - name: Ensure nginx is installed and running
-       yum:
-         name: nginx
-         state: started
-         enabled: yes
-     - name: print software details
-       debug:
-          msg: "whe have installed {{ type}} and version is {{ vesrion }}"
-           
+  tasks:
+    - name: Ensure nginx is installed and running
+      yum:
+        name: nginx
+        state: started
+        enabled: yes
+    - name: print software details
+      debug:
+        msg: "whe have installed {{ type}} and version is {{ vesrion }}"
