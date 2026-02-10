@@ -1,6 +1,6 @@
 # varibale in same playbook
 ---
-- hosts: backend
+- hosts: web
   become: yes
   vars:
     type: httpd
