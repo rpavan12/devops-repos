@@ -4,7 +4,7 @@
   tasks:
     - name: install nginx
       yum:
-        name: "{{ myname }}"
+        name: nginx
         state: present # uninstall nginx
     - name: display nginx details
       debug:
