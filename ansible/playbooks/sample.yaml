@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install nginx
+      yum:
+        name: {{ name }}
+        state: present # uninstall nginx
+    - name: display nginx details
+      debug:
+        msg: 
+          - "we have installed {{ name }} and version is {{ version }}"
+          - " now the user is {{ user }}"
