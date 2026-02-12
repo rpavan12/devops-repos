@@ -1,3 +1,3 @@
-name: nginx
+myname: nginx
 version: latest
 user: ansible

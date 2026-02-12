@@ -4,10 +4,10 @@
   tasks:
     - name: install nginx
       yum:
-        name: "{{ name }}"
+        name: "{{ myname }}"
         state: present # uninstall nginx
     - name: display nginx details
       debug:
         msg: 
-          - "we have installed {{ name }} and version is {{ version }}"
+          - "we have installed {{ myname }} and version is {{ version }}"
           - " now the user is {{ user }}"
