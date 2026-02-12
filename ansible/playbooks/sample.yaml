@@ -2,11 +2,11 @@
 - hosts: web
   become: yes
   tasks:
-    - name: install nginx
+    - name: install httpd
       yum:
-        name: nginx
+        name: httpd
         state: present # uninstall nginx
-    - name: display nginx details
+    - name: display httpd details
       debug:
         msg: 
           - "we have installed {{ myname }} and version is {{ version }}"
