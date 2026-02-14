@@ -21,4 +21,5 @@
       debug:
         msg: "we are executing {{ ansible_run_tags | join(', ') }}"
         var: ansible_run_tags
+      tags: always # this task will always execute irrespective of tags provided in command line
           
