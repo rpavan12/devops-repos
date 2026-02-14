@@ -19,7 +19,7 @@
         enabled: yes
     - name: display httpd details
       debug:
-        msg: "we are executing {{ ansible_run_tags }} "
+        msg: "we are executing {{ ansible_run_tags | join(', ') }}"
     - name: show tags
       debug:
         var: ansible_run_tags
