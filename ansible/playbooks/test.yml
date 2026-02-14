@@ -3,7 +3,7 @@
   hosts: web
   tasks:
     - name: installing nginx
-      pacakage:
+      package:
         name: nginx
         state: present
     - name: start nginx
