@@ -20,4 +20,8 @@
     - name: display httpd details
       debug:
         msg: "we are executing {{ ansible_run_tags }} "
+    - name: show tags
+      debug:
+        var: ansible_run_tags
+      tags: test
           
