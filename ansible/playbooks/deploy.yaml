@@ -20,3 +20,4 @@
         msg: 
           - "we have installed {{ type }} and version is {{ version }}"
           - " now the user is {{ ansible_user }}"
+          - "variables is {{ location }}"

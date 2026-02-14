@@ -1,0 +1,26 @@
+- name: install nginx
+  become: yes
+  hosts: web
+  tasks:
+    - name: installing nginx
+      pacakage:
+        name: nginx
+        state: present
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes  
+    - name: execute linux command
+      command: hostname -f
+      register: result
+    - name: display nginx details
+      debug:
+        msg: 
+          - "we have installed {{ myname }} and version is {{ version }}"
+          - " now the user is {{ user }}"
+          - "variables is {{ location }}"
+          - "{{ a }}"
+          - "{{ b }}"
+          - "{{ c }}"
+          - "command output is {{ result.stdout }}"

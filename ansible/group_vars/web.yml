@@ -1,3 +1,5 @@
 myname: httpd
 version: latest
 user: ansible
+location: "from group_variable"
+a: "from group_variable"
