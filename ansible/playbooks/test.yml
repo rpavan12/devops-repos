@@ -17,8 +17,6 @@
     - name: display nginx details
       debug:
         msg: 
-          - "we have installed {{ myname }} and version is {{ version }}"
-          - " now the user is {{ user }}"
           - "variables is {{ location }}"
           - "{{ a }}"
           - "{{ b }}"
