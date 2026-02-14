@@ -1,6 +1,6 @@
 ---
 - hosts: web
-  become: yes
+  become: backend
   tasks:
     - name: install httpd
       yum:
@@ -20,8 +20,5 @@
     - name: display httpd details
       debug:
         msg: "we are executing {{ ansible_run_tags | join(', ') }}"
-    - name: show tags
-      debug:
         var: ansible_run_tags
-      tags: test
           
