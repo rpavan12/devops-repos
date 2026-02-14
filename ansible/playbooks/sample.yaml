@@ -5,9 +5,19 @@
     - name: install httpd
       yum:
         name: httpd
-        state: present # uninstall nginx
+        state: present
+      tags: httpd
+    - name: install nginx
+      yum:
+        name: nginx
+        state: present
+      tags: nginx
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+        enabled: yes
     - name: display httpd details
       debug:
-        msg: 
-          - "we have installed {{ myname }} and version is {{ version }}"
-          - " now the user is {{ user }}"
+        msg: "we are executing {{ ansible_run_tags }} "
+          
