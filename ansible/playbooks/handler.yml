@@ -1,0 +1,16 @@
+---
+- name: install nginx
+  become: yes
+  hosts: backend
+  tasks:
+    - name: installing nginx
+      yum:
+        name: nginx
+        state: present
+      notify: start_server
+  handlers:
+    - name: start_server
+      service:
+        name: nginx
+        state: started
+        enabled: yes
