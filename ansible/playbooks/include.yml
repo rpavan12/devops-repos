@@ -1,4 +1,11 @@
 #include concept
 - name: install nginix
   become: yes
-  hosts: 
+  hosts: server-2
+  tasks:
+    - include_tasks: httpd.yml
+    - name: display details
+      debug:
+        msg: 
+          - location: "{{ location }}"
+          - user: "{{ user }}"

@@ -11,7 +11,3 @@
         name: httpd
         state: started
         enabled: yes
-    - name: display details
-      debug:
-        - location: "{{ location }}"
-        - user: "{{ user }}"
