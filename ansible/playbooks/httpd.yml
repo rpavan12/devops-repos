@@ -1,14 +1,9 @@
----
 - name: install httpd
-  become: yes
-  hosts: server-2
-  tasks:
-    - name: installing httpd
-      package:
-        name: httpd
-        state: present
-    - name: start httpd
-      service:
-        name: httpd
-        state: started
-        enabled: yes
+  package:
+    name: httpd
+    state: present
+- name: start httpd
+  service: 
+    name: httpd
+    state: started
+    enabled: yes
