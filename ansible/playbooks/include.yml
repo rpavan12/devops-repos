@@ -7,5 +7,5 @@
     - name: display details
       debug:
         msg: 
-          - location: "{{ location }}"
-          - user: "{{ user }}"
+           location: "{{ location }}"
+           user: "{{ user }}"
