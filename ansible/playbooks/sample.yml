@@ -1,6 +1,8 @@
 - name: install nginx
   become: yes
   hosts: web
+  vars_files:
+    - group_vars/myvault.yaml
   tasks:
     - name: installing nginx
       package:
