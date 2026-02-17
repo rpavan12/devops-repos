@@ -2,7 +2,7 @@
   become: yes
   hosts: web
   vars_files:
-    - inventory/group_vars/myvault.yml
+    - /inventory/group_vars/myvault.yml
   tasks:
     - name: installing nginx
       package:
