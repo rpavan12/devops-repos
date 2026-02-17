@@ -1,0 +1,2 @@
+user: ansible
+location: "from host_variable"
