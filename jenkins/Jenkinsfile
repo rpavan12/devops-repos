@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent {}
     stages {
         stage('build') {
             steps {
@@ -23,7 +23,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            echo 'your task was successful executed'
+            echo 'your task was successfully executed'
         }
         failure {
             echo 'This will run only if failed'
