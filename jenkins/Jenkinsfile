@@ -23,7 +23,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            echo 'This will run only if successful'
+            echo 'your task was successful executed'
         }
         failure {
             echo 'This will run only if failed'
