@@ -1,0 +1,20 @@
+#install ansible
+yum install ansible -y
+
+
+#varibale
+we can store variables in different places like and precedence order is as below:
+1. in inventory file    
+2. in group vars
+3. in host variable file
+4. in playbook
+5. in vars_files
+6. by register variable 
+7. use in command line with -e option (e = extra variable) 
+
+7>6>5>4>3>2>1
+
+6
+
+
+
