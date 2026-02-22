@@ -1,5 +1,9 @@
 pipeline {
-  agent {}
+  agent {
+    docker {
+        image 'node:16-alpine'
+    }
+  }
     stages {
         stage('build') {
             steps {
@@ -23,7 +27,7 @@ pipeline {
             echo 'This will always run'
         }
         success {
-            echo 'your task was successfully executed'
+            echo 'hi your  task was successfully executed'
         }
         failure {
             echo 'This will run only if failed'
