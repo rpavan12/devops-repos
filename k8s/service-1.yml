@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: deploy-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: nginx-app
   ports:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30080
