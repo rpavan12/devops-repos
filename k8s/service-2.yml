@@ -4,7 +4,7 @@ metadata:
   name: game-app-service
 
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: game-app
   ports:
