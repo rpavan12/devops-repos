@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-app-deployment
+  labels:
+    app: game-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: game-app
+  template:
+    metadata:
+      labels:
+        app: game-app
+    spec:
+      containers:
+      - name: game-app-container
+        image: rpavan222/pavan:2.0

@@ -7,10 +7,19 @@ spec:
   - host: myapp.local
     http:
       paths:
-      - path: /
+
+      - path: /app1
         pathType: Prefix
         backend:
           service:
             name: deploy-service
+            port:
+              number: 80
+
+      - path: /app2
+        pathType: Prefix
+        backend:
+          service:
+            name: game-app-service
             port:
               number: 80

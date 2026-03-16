@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: game-app-service
+
+spec:
+  type: ClusterIP
+  selector:
+    app: game-app
+  ports:
+  - protocol: TCP
