@@ -1,0 +1,9 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ebs-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode: Immediate   # for testing (creates volume as soon as PVC is created)
+parameters:
+  type: gp3
+  fsType: ext4
