@@ -17,4 +17,11 @@ spec:
       containers:
       - name: nginx-container
         image: nginx:latest
+        volumeMounts:
+        - name: pv1-storage
+          mountPath: /data
+      volumes:
+      - name: pv1-storage
+        persistentVolumeClaim:
+          claimName: pvc1
 
