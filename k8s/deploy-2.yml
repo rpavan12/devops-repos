@@ -17,3 +17,10 @@ spec:
       containers:
       - name: game-app-container
         image: rpavan222/pavan:2.0
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: storage
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: my-pvc
