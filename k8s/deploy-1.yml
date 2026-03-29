@@ -17,6 +17,11 @@ spec:
       containers:
       - name: nginx-container
         image: nginx:latest
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "200m"
         volumeMounts:
         - name: pv1-storage
           mountPath: /data
