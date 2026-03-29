@@ -13,7 +13,15 @@ spec:
     metadata:
       labels:
         app: game-app
-    spec:
+    spec: 
+      initContainers:
+      - name: copy-app
+        image: rpavan222/pavan:2.0
+        command: ["sh", "-c", "cp -r /usr/share/nginx/html/* /data/"]
+        volumeMounts:
+        - name: storage
+          mountPath: /data
+
       containers:
       - name: game-app-container
         image: rpavan222/pavan:2.0
