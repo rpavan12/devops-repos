@@ -28,14 +28,16 @@ WantedBy=multi-user.target
 
 
 
-#install node exporter in nodes which you want monitor
+## install node exporter in nodes which you want monitor
+```
 cd /opt
 wget https://github.com/prometheus/node_exporter/releases/download/v1.10.2/node_exporter-1.10.2.linux-amd64.tar.gz
 tar -xf node_exporter-1.10.2.linux-amd64.tar.gz
 mv node_exporter-1.10.2.linux-amd64 node_exporter
 vi /etc/systemd/system/node_exporter.service
+```
 ## add below code
-
+```
 [Unit]
 Description=Node Exporter service
 After=network-online.target
@@ -47,3 +49,4 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+```
