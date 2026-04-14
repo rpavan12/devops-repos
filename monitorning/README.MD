@@ -1,10 +1,12 @@
+# PROMETHEUS INSTALLATION & SETUP
 #search prometheus install -> open prometheus.io -> choose os(linux)
 #install prometheus in master node
-cd /opt
+``` cd /opt
 wget https://github.com/prometheus/prometheus/releases/download/v3.9.1/prometheus-3.9.1.linux-amd64.tar.gz
 tar -xf prometheus-3.9.1.linux-amd64.tar.gz
 mv prometheus-3.9.1.linux-amd64 prometheus
 vi /etc/systemd/system/prometheus.service
+```
 #add below code
 [Unit]
 Description=Prometheus service
