@@ -1,13 +1,16 @@
 # PROMETHEUS INSTALLATION & SETUP
-#search prometheus install -> open prometheus.io -> choose os(linux)
-#install prometheus in master node
-``` cd /opt
+search prometheus install -> open prometheus.io -> choose os(linux)
+## install prometheus in master node
+```
+cd /opt
 wget https://github.com/prometheus/prometheus/releases/download/v3.9.1/prometheus-3.9.1.linux-amd64.tar.gz
 tar -xf prometheus-3.9.1.linux-amd64.tar.gz
 mv prometheus-3.9.1.linux-amd64 prometheus
 vi /etc/systemd/system/prometheus.service
 ```
-#add below code
+
+## add below code
+```
 [Unit]
 Description=Prometheus service
 After=network-online.target
@@ -19,6 +22,7 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+```
 
 
 
@@ -30,7 +34,7 @@ wget https://github.com/prometheus/node_exporter/releases/download/v1.10.2/node_
 tar -xf node_exporter-1.10.2.linux-amd64.tar.gz
 mv node_exporter-1.10.2.linux-amd64 node_exporter
 vi /etc/systemd/system/node_exporter.service
-#add below code
+## add below code
 
 [Unit]
 Description=Node Exporter service
