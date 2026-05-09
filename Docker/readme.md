@@ -3,7 +3,7 @@
 ## Table of Contents
 choose any one of the below method to install docker
 
-- [Method 1: Official website ](#Method 1: Official website)
+- [Method 1: Official website](#method-1)
 - [Method 2: ](#method-2)
 - [Verification](#verification)
 
