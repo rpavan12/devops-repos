@@ -1,9 +1,9 @@
 # Docker setup/installation
 
 ## Table of Contents
-choose any one of the below method
+choose any one of the below method to install docker
 
-- [Method 1: Official website](#method-1)
+- [Method 1: Official website ](#Method 1: Official website)
 - [Method 2: ](#method-2)
 - [Verification](#verification)
 
@@ -33,7 +33,7 @@ sh install-docker.sh --version 23.0
 
 ## Verification
 ```
-To check docker version
+# To check docker version
 
 docker --version
 
