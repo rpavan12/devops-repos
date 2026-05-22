@@ -36,6 +36,5 @@ sh install-docker.sh --version 23.0
 # To check docker version
 
 docker --version
-
 ```
 
