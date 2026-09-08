@@ -9,9 +9,10 @@ Go to below jenkins official website and choose your OS and follow the installat
 # to upgrade the server
 sudo yum upgrade -y
 
-# install java
-sudo yum install fontconfig java-21-openjdk -y
-sudo yum install java-17-openjdk -y
+# install java (choose below based on your OS)
+sudo dnf install fontconfig java-21-openjdk -y
+sudo dnf install java-21-amazon-corretto -y    # for amazon linux
+sudo apt install fontconfig openjdk-21-jre     # for ubuntu
 
 # java version check
 java --version
@@ -49,6 +50,22 @@ jenkins --version
 
 # TROUBLESHOOTING (Any issues while installation)
 1. versions compatability of jenkins and java (use stable versions )
-2. stoarge issue (choose good stotrage ) 
-3. firewall issue (allow jenkins port in firewall )
+```
+# to check version mismaches 
+sudo -u jenkins java -jar /usr/share/java/jenkins.war
+```
+2. stoarge issue (choose good stotrage )
+```
+# to increase /tmp folder storage 
+sudo vi /etc/fstab
+
+# add below line in fstab file (example for ebs volume)
+tmpfs /tmp tmpfs defaults,size=2G 0 0
+
+# remount
+sudo mount -o remount /tmp
+
+df -h /tmp
+```
+3. firewall issue (allow jenkins port(8080) in firewall )
 4. permission issue (run jenkins with proper permissions )

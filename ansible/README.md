@@ -1,8 +1,5 @@
 # My Ansible Learning Journey - DevOps Engineer Transition
 
-## About Me
-I'm transitioning into a DevOps Engineer role with 3.5 years of experience and have been practicing Ansible for the past year. This repository showcases my hands-on learning and understanding of configuration management and automation.
-
 ---
 
 ## Table of Contents
